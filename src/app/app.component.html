@@ -1,0 +1,32 @@
+<!-- navigation bar -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a id="nav-bar-logo"class="navbar-brand font-weight-bold ml-4" href="/">ARTISAN<span class="sr-only">(current)</span></a>
+  <div class="container m-0">
+      <ul class="navbar-nav font-weight-light"> <!-- Catalogo de productos --> 
+          <li class="nav-item active"> <!-- producto estrella --> 
+              <a class="nav-link" href="./">PRODUCTOS <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="./">NOSOTROS</a>
+          </li>  
+      </ul>
+  </div>
+  <div id="nav_icons"class="container justify-content-around w-25">
+      <a href="#" data-toggle="collapse" data-target="#collapseExample"><i class="fa fa-search"></i></a>
+      <a href="./"><i class="fas fa-user"></i></a>
+      <a href="./"><i class="fa fa-shopping-cart">  0</i></a>
+  </div>
+  </nav>
+  <div class="collapse" id="collapseExample">
+      <div class="card card-body border-0"> 
+          <div class="row">
+              <div class="col-11">
+                  <input class="form-control" type="text" placeholder="Buscar producto..." aria-label="Search">
+              </div>
+              <div id ="search_nav_bar"class="col-1 p-0 d-flex justify-content-left">
+                  <a href="#"><i class="fa fa-search align-bottom fa-lg"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+<!-- end of navigation bar -->
