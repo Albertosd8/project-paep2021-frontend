@@ -1,0 +1,119 @@
+<div class="container w-50 mt-4">
+      <h1>Crear un nuevo producto</h1>    
+      <form id="form-register" (ngSubmit)="onSubmit()">
+            <div class="container p-0">
+                  <div class="row m-0">
+                        <div class="col-6 pl-0 pr-2"> <!-- name -->
+                              <label for="product_name">Nombre de producto</label>
+                              <input name="product_name" [formControl]="product_name" type="text" class="form-control" required>
+                              <div *ngIf="product_name.touched && !product_name.valid">
+                                    <div class="text-danger" *ngIf="product_name.errors.required">
+                                    Ingresa un nombre de producto
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-6 pl-2 pr-0"> <!-- price -->
+                              <label for="lastname">precio</label>
+                              <input 
+                              name="price" 
+                              [formControl]="price"
+                              min="0"
+                              type="number" class="form-control" required>
+                              <div *ngIf="price.touched && !price.valid">
+                                    <div class="text-danger" *ngIf="price.errors.required">
+                                    Ingresa un precio
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <!-- descripcion  -->
+            <div class="mt-2">
+                  <label for="email">Descripción de producto:</label>
+                  <input  
+                  name="description" 
+                  [formControl]="description"
+                  type="description" 
+                  name="description" class="form-control"  required>
+                  <div *ngIf="description.touched && !description.valid">
+                        <div class="text-danger" *ngIf="description.errors.required">
+                        Ingresa una descripcion de producto 
+                        </div>
+                  </div>
+            </div>
+            <!-- color y peso  -->
+            <div class="container p-0 mt-2">
+                  <div class="row m-0">
+                        <div class="col-6 pl-0 pr-2"> <!-- name -->
+                              <label for="color">Color</label>
+                              <select 
+                              name="color"
+                              [formControl]="color"
+                              class="form-control" id="form_color" required> 
+                                    <option value="" selected disabled hidden>Select color...</option>
+                                    <option value="BLACK">Black</option>
+                                    <option value="WHITE">White</option>
+                                    <option value="GREY">Grey</option>
+                                    <option value="RED">Red</option>
+                                    <option value="ORANGE">Orange</option>
+                                    <option value="YELLOW">Yellow</option>
+                                    <option value="GREEN">Green</option>
+                                    <option value="BLUE">Blue</option>
+                                    <option value="PURPLE">Purple</option>
+                                    <option value="PINK">Pink</option>
+                                    <option value="BROWN">Brown</option>
+                              </select>
+                              <div *ngIf="color.touched && !color.valid">
+                                    <div class="text-danger">
+                                          Selecciona un color     
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-6 pl-2 pr-0"> <!-- weight -->
+                              <label for="weight">Peso</label>
+                              <input 
+                              name="weight" 
+                              [formControl]="weight"
+                              min="0"
+                              type="number" class="form-control" required>
+                              <div *ngIf="weight.touched && !weight.valid">
+                                    <div class="text-danger" *ngIf="weight.errors.required">
+                                          Ingresa un precio
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <!-- Principal image  -->
+            <div class="mt-2">
+                  <label for="img_principal">Imagen</label>
+                  <input 
+                  name="principal_img"
+                  [formControl]="principal_img"
+                  type="text" class="form-control" required> 
+                  <div *ngIf="principal_img.touched && !principal_img.valid">
+                        <div class="text-danger" *ngIf="principal_img.errors.required">
+                              Ingresa un link para imagen
+                        </div>
+                  </div>
+            </div>
+            <!-- Artisan name  -->
+            <div class="mt-2">
+                  <label for="artisan_name">Nombre de artesano</label>
+                  <input 
+                  name="name_artisan"
+                  [formControl]="name_artisan"
+                  type="text" class="form-control" required> 
+                  <div *ngIf="name_artisan.touched && !name_artisan.valid">
+                        <div class="text-danger" *ngIf="name_artisan.errors.required">
+                        Ingresa un nombre de artesano
+                        </div>
+                  </div>
+            </div>
+            <div class="w-100 d-flex justify-content-center">
+                  <button form="form-register" type="submit" class="btn btn-primary btn-lg mt-3 mr-2" id="button" 
+                  [disabled]="!product_name.valid || !price.valid || !description.valid || !color.valid || !weight.valid 
+                  || !principal_img.valid || !name_artisan.valid">Crear producto</button>
+            </div>
+      </form>
+</div>

@@ -1,0 +1,11 @@
+.navbar-custom{
+    background-color:#8f7e67;
+}
+
+#nav_icons>a>i, .nav_icons>a>i{
+    color:white;
+}
+
+.navbar-custom-admin{
+    background-color: rgb(48, 50, 58);
+}

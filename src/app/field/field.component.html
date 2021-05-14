@@ -1,0 +1,23 @@
+<div class="container w-50 mt-4">
+    <h1>Iniciar sesión</h1>
+    <p>Introduzca la dirección de correo electrónico y contraseña para acceder a su cuenta.</p>
+    <form id="form-login" (ngSubmit)="LoginUser()">    
+        <div class="input-group-lg" style="max-height: 640px;">
+            <label for="email_r">Correo</label>
+            <input name="email" 
+            [formControl]="email" 
+            type="email" id="email_r" class="form-control mb-3" placeholder="Correo registrado" aria-label="Correo" aria-describedby="helpId" required>
+            <label for="password_r">Contraseña</label>
+            <input name="password" 
+            [formControl]="password" type="password" id="password_r" class="form-control" placeholder="Contraseña" aria-label="password" aria-describedby="helpId" required>
+            <div class="w-100 d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary btn-lg mt-3" form="form-login">Iniciar sesión</button>
+            </div>
+            <div class="w-100 mt-2">
+                    <div class="mt-4 justify-content-center">
+                        <p>¿No tienes cuenta? <a routerLink="/register-component" routerLinkActive="active">Registrate aquí</a></p>
+                    </div>               
+            </div>
+        </div>     
+    </form> 
+</div>

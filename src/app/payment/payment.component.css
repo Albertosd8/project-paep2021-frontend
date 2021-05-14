@@ -1,0 +1,67 @@
+.header-form-text{
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background-color: #e8d8c3; 
+      font-weight: bold;
+  }
+  
+  .user-form-text{
+      background-color: white;
+  }
+  
+  .header-form-text p, .user-form-text p{
+      padding-top: 1em;
+  }
+  
+  .user-form-text > div{
+      border-bottom: gainsboro;
+      border-bottom-style: solid; 
+      border-bottom-width: 0.8px;
+      border-bottom-color: gainsboro; 
+      text-align: center;
+  }
+  
+  .user-form-text div:nth-child(2) p{
+      text-align: justify;
+  }
+  
+  .header-form-text div{
+      text-align: center;
+  }
+  
+  .inactive_user{
+      background-color: #DCDCDC;
+      border-radius: 5px;
+  } 
+  
+  .active_user{
+      background-color: #7eac65;
+      border-radius: 5px;
+  }
+  
+  .portrait {
+      border-radius: 5px;
+      max-width: 100%;
+      max-height: 100%;
+  }
+  
+  .vertical-center{
+      display: flex; 
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .form-check-input{
+      transform: scale(1.3)
+  }
+  
+  .admin_button_opt button{
+      width: 100%;
+  }
+
+  .total_text{
+      text-align: end;
+  }
+  .total_text_price{
+    text-align: center;
+}

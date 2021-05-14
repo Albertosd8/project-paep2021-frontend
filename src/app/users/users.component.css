@@ -1,0 +1,41 @@
+.header-form-text{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #D2B48C; 
+    font-weight: bold;
+}
+
+p{
+    text-align: center;
+}
+
+.user-form-text{
+    background-color: white;
+}
+
+.header-form-text p{
+    padding-top: 1em;
+}
+.user-form-text p{
+    padding-top: 1em;
+}
+
+.user-form-text div{
+    border-style: solid; border-width: 0.8px;
+    border-color: gainsboro;
+}
+
+.user-form-text div:last-child, .header-form-text div:last-child, 
+.user-form-text div:nth-child(2), .header-form-text div:nth-child(2){
+    text-align: center;
+}
+
+.inactive_user{
+    background-color: #DCDCDC;
+    border-radius: 5px;
+} 
+
+.active_user{
+    background-color: #7eac65;
+    border-radius: 5px;
+}

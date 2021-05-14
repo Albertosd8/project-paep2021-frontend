@@ -1,0 +1,55 @@
+<div class="container mt-4 p-0">
+    <h3>Products</h3>
+</div>
+<hr>
+<div class="container">
+    <div class="row header-form-text">
+        <div class="col-2">
+            <p>Product image</p>
+        </div>
+        <div class="col-3">
+            <p>product</p>
+        </div>
+        <div class="col-2">
+            <p>Price</p>
+        </div>
+        <div class="col-1">
+            <p>Color</p>
+        </div>
+        <div class="col-1">
+            <p>weight</p>
+        </div>
+        <div class="col-2">
+            <p>Artisan name</p>
+        </div>
+    </div>
+    <div *ngFor='let product of productsArray; let i = index'  class="row user-form-text">
+        <div class="col-2">
+            <img class="portrait mt-2 mb-2" src="{{product.principal_img}}" alt="">
+        </div>
+        <div class="col-3 vertical-center">
+            <div><h5 class="mt-2">{{product.product_name}}</h5>
+                <p>{{product.description}}</p>
+            </div>  
+        </div>
+        <div class="col-2 vertical-center">
+            <p>${{product.price}}</p>
+        </div>
+        <div class="col-1 vertical-center">
+            <p>{{product.color}}</p>
+        </div>
+        <div class="col-1 vertical-center">
+            <p>{{product.weight}}</p>
+        </div>
+        <div class="col-2 vertical-center">
+            <p>{{product.name_artisan}}</p>
+        </div>
+        <div class="col-1 vertical-center">
+            <div>
+                <div class="row mt-2 admin_button_opt">
+                    <button class="btn btn-secondary" (click)="deleteProduct(product.product_id, i)"> <i class="fas fa-trash"></i></button>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>

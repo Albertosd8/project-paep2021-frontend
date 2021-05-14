@@ -1,0 +1,46 @@
+<div class="container mt-4 mb-4 p-0"><!-- 3 -->
+    <!--products-->
+    <div class="row mt-4" *ngIf="productsArray[0]">
+        <div class="col-3" *ngFor="let item of [].constructor(4); let i = index">
+            <div class="card" style="width: 17rem;" *ngIf="productsArray[i]">
+                <img class="card-img-top" src="{{productsArray[i].principal_img}}" alt="Card image cap">
+                <div class="card-body">
+                  <a class="card-text product-link" routerLink="/productinfo-component" routerLinkActive="active" (click)="setProductID(productsArray[i].product_id)">{{productsArray[i].product_name}}</a>
+                  <p class="card-text price-product">${{productsArray[i].price}}</p>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="row mt-4" *ngIf="productsArray[4]">
+        <div class="col-3" *ngFor="let item of [].constructor(4); let i = index">
+            <div class="card" style="width: 17rem;" *ngIf="productsArray[i+4]">
+                <img class="card-img-top" src="{{productsArray[i+4].principal_img}}" alt="Card image cap">
+                <div class="card-body">
+                  <a class="card-text product-link" routerLink="/productinfo-component" routerLinkActive="active" (click)="setProductID(productsArray[i+4].product_id)">{{productsArray[i+4].product_name}}</a>
+                  <p class="card-text price-product">${{productsArray[i+4].price}}</p>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="row mt-4" *ngIf="productsArray[8]">
+        <div class="col-3" *ngFor="let item of [].constructor(4); let i = index">
+            <div class="card" style="width: 17rem;" *ngIf="productsArray[i+8]">
+                <img class="card-img-top" src="{{productsArray[i+8].principal_img}}" alt="Card image cap">
+                <div class="card-body">
+                  <a class="card-text product-link" routerLink="/productinfo-component" routerLinkActive="active" (click)="setProductID(productsArray[i+8].product_id)">{{productsArray[i+8].product_name}}</a>
+                  <p class="card-text price-product">${{productsArray[i+8].price}}</p>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!--end of products-->
+    <div class="container mt-4">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><button class="page-link" (click)="getProducts(1)"><</button></li>
+                <li class="page-item"><button class="page-link" (click)="getProducts(2)">></button></li>
+            </ul>
+        </nav>
+    </div>
+    
+</div>

@@ -1,0 +1,18 @@
+<div class="container justify-content-center align-items-center mt-4 mb-4" *ngIf="product">
+      <div class="row mt-4 mb-4">
+            <div class="col-6 m-0 p-0 d-flex justify-content-end">
+                  <div class="card m-0" style="width: 17rem;">
+                        <img class="card-img-top" src="{{product[8]}}" alt="Card image cap">
+                  </div>
+            </div>
+            <div class="col-6">
+                  <h2 class="card-text product-link mt-4">{{product[2]}}</h2>
+                  <p class="card-text price-product">Descripción: {{product[5]}}</p>
+                  <p class="card-text price-product">Color: {{product[6]}}</p>
+                  <p class="card-text price-product">Peso: {{product[7]}}</p>
+                  <p class="card-text price-product">Precio: ${{product[3]}}</p>
+                  <button (click)="addProduct_tocart()"type="button" class="btn btn-success">Agregar a carrito</button> <hr>
+                  <button (click)="redirect()" type="button" class="btn btn-secondary">volver</button>
+            </div>
+      </div>
+</div>

@@ -1,0 +1,9 @@
+.img_fitting{
+    width: 100%;
+    height: auto;
+}
+
+.page_text{
+    text-align: justify;
+  text-justify: inter-word;
+}

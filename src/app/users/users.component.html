@@ -1,0 +1,35 @@
+<div class="container mt-4 p-0">
+    <h3>Members</h3>
+</div>
+<hr>
+<div class="container mb-4">
+    <div class="row header-form-text">
+        <div class="col-3">
+            <p>Name</p>
+        </div>
+        <div class="col-3">
+            <p>Lastname</p>
+        </div>
+        <div class="col-3">
+            <p>Email</p>
+        </div>
+        <div class="col-3">
+            <p>Birth_date</p>
+        </div>
+    </div>
+    <div *ngFor='let user of usersArray' class="row user-form-text" >
+        <div class="col-3">
+            <p>{{user.name}}</p>
+        </div>
+        <div class="col-3">
+            <p>{{user.lastname}}</p>
+        </div>
+        <div class="col-3">
+            <p>{{user.email}}</p>
+        </div>
+        <div class="col-3">
+            <p>{{(user.birth_date).substring(0,10)}}</p>
+        </div>
+    </div>
+</div>
+

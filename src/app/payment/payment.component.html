@@ -1,0 +1,51 @@
+<div class="container mt-4 p-0">
+      <h3>Carrito de compras</h3>
+</div>
+<hr>
+<div class="container mb-4" *ngIf="productsArray[0]">
+      <div class="row header-form-text">
+            <div class="col-1">
+                  <p>no.</p>
+            </div>
+            <div class="col-5">
+                  <p>nombre de producto</p>
+            </div>
+            <div class="col-6">
+                  <p>precio</p>
+            </div>
+      </div>
+      <div *ngFor="let product of [].constructor(number*2); let i = index" class="row user-form-text">
+            <div class="col-12 p-0">
+                  <div class="container p-0 m-0 vertical-center" *ngIf="i % 2 == 0">
+                        <div class="col-1">
+                              <p>{{(i/2)+1}}.-</p>
+                        </div>
+                        <div class="col-5">
+                              <div>
+                                    <p class="mt-2">{{productsArray[i]}}</p>
+                              </div>  
+                        </div>
+                        <div class="col-6 vertical-center">
+                              <p>${{productsArray[i+1]}}</p>
+                        </div>
+                  </div>  
+            </div>
+      </div>
+      <div class="row mt-1 mb-4">
+            <div class="col-8 total_text">
+                  <h4>Total:</h4>
+            </div>
+            <div class="col-2 total_text_price">
+                  <h4>${{total}}</h4>
+            </div>
+      </div>
+      <div class="row mt-1 mb-4">
+            <div class="col-8 total_text">
+                  <button (click)="emptyShoppingCar()" type="button" class="btn btn-secondary">Vaciar carrito</button>
+            </div>
+            <div class="col-2 total_text_price">
+                  <button (click)="completeTransactionShoppingCart()" type="button" class="btn btn-success">Realizar compra</button>
+            </div>
+      </div>
+</div>
+  

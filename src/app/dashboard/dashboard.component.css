@@ -1,0 +1,21 @@
+.form-control.ng-touched.ng-invalid{
+      border:2px; border-style: solid;
+      border-color: rgb(223, 7, 7);
+}
+
+.form-control.ng-touched.ng-valid{
+      border:2px; border-style: solid;
+      border-color: rgb(52, 184, 52);
+}
+
+.form-control {
+      background-color: #FAFAFA;
+}
+
+form div div{
+      width:100%;
+}
+
+label{
+      margin:0;
+}

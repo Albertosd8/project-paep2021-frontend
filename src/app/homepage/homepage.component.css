@@ -1,0 +1,37 @@
+.square{
+    background-color: #8f7e67;
+}
+
+.square{
+    background-color: #a29078;
+}
+
+.square .page_text{
+    padding: 70px 0;
+}
+
+#first_img{
+    width: 100%;
+    height: auto;
+}
+
+
+#second_img{
+    width: 100%;
+    height: auto;
+}
+
+#third_img{
+    width: 100%;
+    height: auto;
+}
+
+.img_fitting{
+    width: 100%;
+    height: auto;
+}
+
+.page_text{
+    text-align: justify;
+  text-justify: inter-word;
+}
