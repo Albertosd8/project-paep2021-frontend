@@ -15,7 +15,7 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.productsArray = '';
-    this.http.get('http://localhost:3000/products').subscribe((products) => 
+    this.http.get('/products').subscribe((products) => 
     {this.productsArray = Object.values(products);});
     if(!this.pagenumber){
       this.pagenumber = 1;
@@ -54,7 +54,7 @@ export class ProductsComponent implements OnInit {
       number_prod = (parseInt(this.pagenumber,10) + 10).toString();
     }
     const param = {params: {skip:number_prod}};
-    this.http.get('http://localhost:3000/products',param).subscribe((products) => {
+    this.http.get('/products',param).subscribe((products) => {
       this.productsArray = Object.values(products);
     });
   }
