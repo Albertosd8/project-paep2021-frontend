@@ -43,7 +43,7 @@ export class DashboardComponent implements OnInit {
       name_artisan: this.name_artisan.value,
       tags: this.tags
     });
-    return this.http.post('http://localhost:3000/products', body, {headers: {'Content-Type': 'application/json'}}).toPromise().then(data =>{
+    return this.http.post('/products', body, {headers: {'Content-Type': 'application/json'}}).toPromise().then(data =>{
       alert('registro exitoso!');
       console.log('registro exitoso'+ data);
       this.redirect();

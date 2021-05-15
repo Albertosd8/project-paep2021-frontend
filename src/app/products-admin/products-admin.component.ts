@@ -14,11 +14,11 @@ export class ProductsAdminComponent implements OnInit {
   constructor(private http: HttpClient)  { }
 
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/products').subscribe((products) => this.productsArray = products);
+    this.http.get('/products').subscribe((products) => this.productsArray = products);
   }
 
   deleteProduct(product_id, index){
-    this.http.delete('http://localhost:3000/products'+ '/' + product_id).subscribe(
+    this.http.delete('/products'+ '/' + product_id).subscribe(
       ()=>{this.productsArray.splice(index,1);
     });}
   

@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
       shopping_history: [],
       rol: this.user_type
     });
-    return this.http.post('http://localhost:3000/users', body, {headers: {'Content-Type': 'application/json'}}).toPromise().then(data =>{
+    return this.http.post('/users', body, {headers: {'Content-Type': 'application/json'}}).toPromise().then(data =>{
       alert('registro exitoso!');
       console.log('registro exitoso'+ data);
       this.redirect();

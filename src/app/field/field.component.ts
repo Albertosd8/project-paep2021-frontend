@@ -19,7 +19,7 @@ export class FieldComponent implements OnInit {
     const body = JSON.stringify({ 
       email:(this.email.value).toLowerCase(),
       password: this.password.value});
-    return this.http.post('http://localhost:3000/login', body, {headers: {'Content-Type': 'application/json'}}).toPromise()
+    return this.http.post('/login', body, {headers: {'Content-Type': 'application/json'}}).toPromise()
     .then(data =>{
       let token = Object.values(data);
       let email = this.email.value.toLowerCase();

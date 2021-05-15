@@ -37,7 +37,7 @@ export class ProductInfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.product = '';
-    const url = 'http://localhost:3000/products'+'/'+sessionStorage.getItem("currentItem");
+    const url = '/products'+'/'+sessionStorage.getItem("currentItem");
     this.http.get(url).subscribe((product_data) => {this.product = Object.values(product_data);
     });
   }

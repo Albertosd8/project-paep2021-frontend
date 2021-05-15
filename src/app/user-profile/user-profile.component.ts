@@ -36,7 +36,7 @@ export class UserProfileComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) { }
   
   ngOnInit(): void {
-    const url = 'http://localhost:3000/users/'+ this.email;
+    const url = '/users/'+ this.email;
       this.http.get(url).subscribe(
         (user) => {
           this.name = Object.values(user)[2];

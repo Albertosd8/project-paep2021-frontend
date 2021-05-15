@@ -13,7 +13,7 @@ export class UsersComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/users').subscribe((users) => this.usersArray = users);
+    this.http.get('/users').subscribe((users) => this.usersArray = users);
   } 
 
 
