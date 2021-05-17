@@ -1,1 +1,36 @@
-<p>sales works!</p>
+<div class="container mt-4 p-0">
+      <h3>Sales</h3>
+  </div>
+  <hr>
+  <div class="container mb-4">
+      <div class="row header-form-text">
+          <div class="col-3">
+              <p>User email</p>
+          </div>
+          <div class="col-3">
+              <p>products</p>
+          </div>
+          <div class="col-3">
+              <p>Date</p>
+          </div>
+          <div class="col-3">
+              <p>Total</p>
+          </div>
+      </div>
+      <div *ngFor='let sale of salesArray' class="row sale-form-text" >
+          <div class="col-3">
+              <p>{{sale.user_email}}</p>
+          </div>
+          <div class="col-3">
+              <p>{{sale.products}}</p>
+          </div>
+          <div class="col-3">
+              <p>{{sale.sale_added_date.substring(0,10)}}</p>
+          </div>
+          <div class="col-3">
+              <p>${{sale.Total}}</p>
+          </div>
+      </div>
+  </div>
+  
+  

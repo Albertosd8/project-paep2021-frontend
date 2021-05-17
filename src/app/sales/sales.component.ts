@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-sales',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalesComponent implements OnInit {
 
-  constructor() { }
+  salesArray: any;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get('/sales').subscribe((sales) => this.salesArray = sales);
   }
 
 }

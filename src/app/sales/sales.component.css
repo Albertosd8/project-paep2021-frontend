@@ -1,0 +1,32 @@
+.header-form-text{
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background-color: #D2B48C; 
+      font-weight: bold;
+  }
+  
+  p{
+      text-align: center;
+  }
+  
+  .sale-form-text{
+      background-color: white;
+  }
+  
+  .header-form-text p{
+      padding-top: 1em;
+  }
+  .sale-form-text p{
+      padding-top: 1em;
+  }
+  
+  .sale-form-text div{
+      border-style: solid; border-width: 0.8px;
+      border-color: gainsboro;
+  }
+  
+  .sale-form-text div:last-child, .header-form-text div:last-child, 
+  .sale-form-text div:nth-child(2), .header-form-text div:nth-child(2){
+      text-align: center;
+  }
+  

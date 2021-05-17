@@ -25,6 +25,7 @@ export class PaymentComponent implements OnInit {
 
   completeTransactionShoppingCart(){
         if(sessionStorage.getItem("current_user_account")){
+              this.registerSale();
               alert('Compra realizada exitosa por '+ sessionStorage.getItem("current_user_account"));
               this.router.navigate(['products-component']);
               sessionStorage.removeItem("shoppingcart_products");
@@ -34,6 +35,32 @@ export class PaymentComponent implements OnInit {
             alert('inicia sesión para realizar compra');
             this.router.navigate(['field-component']);
         }
+  }
+
+  registerSale(){
+    let newArray = [];
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth()+1;
+    let day = today.getDate();
+    let actual_date = year + '-' + month + '-' + day;
+    for(let i = 0 ; i < this.number*2 ;i++){
+      if(i % 2 == 0){
+        newArray.push(this.productsArray[i]);
+      }
+    }
+    const body = JSON.stringify({ 
+      user_email: sessionStorage.getItem("current_user_account"),
+      products: newArray,
+      Total: this.total,
+      sale_added_date: actual_date
+    });
+    return this.http.post('/sales', body, {headers: {'Content-Type': 'application/json'}}).toPromise().then(data =>{
+      console.log('venta exitosa');
+    }).catch(err => {
+      console.log(Object.values(err));
+      alert(Object.values(err)[7]);
+    });
   }
 
   constructor(private http: HttpClient, private router: Router) { }
